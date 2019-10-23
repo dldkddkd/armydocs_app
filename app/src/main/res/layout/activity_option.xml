@@ -37,6 +37,7 @@
                     android:layout_weight="10"
                     android:hint="..."
                     android:textSize="20dp"
+                    android:textColor="@color/colorAccent"
                     android:maxWidth="20dp"
                     android:maxLength="21"/>
 
