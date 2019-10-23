@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/back_button"
+            android:onClick="BackButton"
+            android:background="@drawable/backspace"
+            android:scaleX="0.7"
+            android:scaleY="0.7"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:textAlignment="center"
+            android:text="아미독스"
+            android:textSize="110px"
+            android:textColor="#FF0000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="295dp"
+                    android:layout_height="50dp"
+                    android:text="회원 가입"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="30dp"
+                    android:textColor="#000000"/>
+                <EditText
+                    android:id="@+id/new_id"
+                    android:layout_width="295dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="15dp"
+                    android:hint="군번.."
+                    android:textColorHint="@color/colorAccent"
+                    android:background="@drawable/border"
+                    android:inputType="text"
+                    android:textColor="#000000"/>
+                <EditText
+                    android:id="@+id/new_password"
+                    android:layout_width="295dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:hint="비밀번호.."
+                    android:textColorHint="@color/colorAccent"
+                    android:background="@drawable/border"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorAccent"/>
+
+
+                <EditText
+                    android:id="@+id/new_belong"
+                    android:layout_width="295dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:hint="소속.."
+                    android:textColorHint="@color/colorAccent"
+                    android:background="@drawable/border"
+                    android:inputType="text"
+                    android:textColor="@color/colorAccent"/>
+
+                <EditText
+                    android:id="@+id/new_name"
+                    android:layout_width="295dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:hint="이름.."
+                    android:textColorHint="@color/colorAccent"
+                    android:background="@drawable/border"
+                    android:inputType="text"
+                    android:textColor="@color/colorAccent"/>
+
+                <EditText
+                    android:id="@+id/new_rank"
+                    android:layout_width="295dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"
+                    android:hint="계급.."
+                    android:textColorHint="@color/colorAccent"
+                    android:background="@drawable/border"
+                    android:inputType="text"
+                    android:textColor="@color/colorAccent"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="입대일"
+                        android:background="@drawable/border"
+                        android:textColor="@color/colorAccent"/>
+
+                    <DatePicker
+                        android:id="@+id/new_enlist_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:datePickerMode="spinner"
+                        android:background="@color/colorAccent"
+                        android:calendarViewShown="false"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="전역일"
+                        android:background="@drawable/border"
+                        android:textColor="@color/colorAccent"/>
+
+                    <DatePicker
+                        android:id="@+id/new_discharge_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/colorAccent"
+                        android:datePickerMode="spinner"
+                        android:calendarViewShown="false"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/signup_button"
+                    android:layout_width="230dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:onClick="signup"
+                    android:text="가입완료"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:background="#DDDDDD"/>
+                </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

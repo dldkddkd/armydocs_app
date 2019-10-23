@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/back_button"
+            android:background="@drawable/home" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:textAlignment="center"
+            android:text="아미독스"
+            android:textSize="110px"
+            android:textColor="#FF0000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Step 2. 설문 상세 항목"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:textColor="#000000"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/ws_short"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="객관식"
+                android:textSize="20dp"
+                android:textColor="@color/colorAccent"
+                android:buttonTint="@color/colorAccent"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/ws_long"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="주관식"
+                android:textSize="20dp"
+                android:textColor="@color/colorAccent"
+                android:buttonTint="@color/colorAccent"
+                android:checked="false"/>
+
+        </RadioGroup>
+        <!-- 대대용 -->
+        <TextView
+            android:id="@+id/ws_aq"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:background="@color/for_army"
+            android:text="질문+"
+            android:textColor="@color/colorAccent"
+            android:textSize="70px"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/ws_mq"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:background="@color/for_army"
+            android:text="질문-"
+            android:textColor="@color/colorAccent"
+            android:textSize="70px"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:background="@color/complete"
+            android:text="저 장"
+            android:textColor="@color/colorAccent"
+            android:textSize="70px"
+            android:onClick="save"
+            android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingTop="10dp"
+            android:background="@color/colorAccent"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/linear_root">
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+</LinearLayout>

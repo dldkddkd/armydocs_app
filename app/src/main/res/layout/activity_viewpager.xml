@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="17dp"
+    tools:context="com.example.armydocs.Activity.MainActivity"
+    android:background="#B2DFEE">
+
+       <androidx.viewpager.widget.ViewPager
+           android:background="#CCCCCC"
+           android:id="@+id/vp_pager1"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+       </androidx.viewpager.widget.ViewPager>
+
+</LinearLayout>

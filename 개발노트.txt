@@ -1,0 +1,39 @@
+-----------------------------------------------------------
+db 필요한 곳
+
+
+LoginActivity
+
+SignUpActivity
+
+HomeActivity
+
+InfoActivity
+
+SurveyActivity (아마도)
+
+QuestionActivity
+
+SaveActivity
+
+그냥 다 필요하네!
+-----------------------------------------------------------
+
+코드 채워야되는 부분
+
+LoginActivity 아이디 비번 찾기 32
+
+InfoActivity 개인 정보 데이터 업데이트 65
+
+HomeActivity 문의하기 기능 62
+
+SignUpActivity 중복된 군번인지 확인하는 기능 73~77
+--했는데 작동이 잘 안됨
+
+SignUpActivity 새 아이디 데이터 추가 79~89
+
+-----------------------------------------------------------
+
+마지막 날에 해야 될 것
+
+LoginActivity 45 주석처리

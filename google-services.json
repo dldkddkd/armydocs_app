@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "245860625419",
+    "firebase_url": "https://armydocs-app.firebaseio.com",
+    "project_id": "armydocs-app",
+    "storage_bucket": "armydocs-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245860625419:android:b652357fffc46f78d2eb0e",
+        "android_client_info": {
+          "package_name": "com.example.armydocs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245860625419-uurpn81k48j2ct09prmaglo91f376352.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9Eapg0jsvqLmCUGa52CNPuILE9YD8zAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245860625419-uurpn81k48j2ct09prmaglo91f376352.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

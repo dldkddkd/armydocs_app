@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/back_button"
+            android:onClick="BackButton"
+            android:background="@drawable/home" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:textAlignment="center"
+            android:text="아미독스"
+            android:textSize="110px"
+            android:textColor="#FF0000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.01"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="20dp"
+                        android:text="Step 1. 설문 기본 정보"
+                        android:textAlignment="center"
+                        android:textSize="24dp"
+                        android:textColor="#000000"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:layout_gravity="top"
+                            android:gravity="center"
+                            android:text="커버이미지"
+                            android:textSize="19dp"
+                            android:textColor="@color/colorAccent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:layout_gravity="top"
+                                android:gravity="center"
+                                android:textSize="19dp"
+                                android:textColor="@color/colorAccent"/>
+
+                            <ImageView
+                                android:id="@+id/cs_gallary"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:layout_weight="1.5"
+                                android:layout_gravity="center"
+                                android:background="#999999"
+                                android:text="사진 선택"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:layout_gravity="top"
+                                android:gravity="center"
+                                android:textColor="@color/colorAccent"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.01"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/cs_survey_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="설문 제목.."
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20dp"
+                            android:textColorHint="#999999"
+                            android:paddingLeft="10dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="설문 기간"
+                        android:textSize="20dp"
+                        android:textColor="#000000"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="82dp"
+                        android:layout_weight="0.01"
+                        android:paddingBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="설문 시작일"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorAccent"
+                            android:textAlignment="center"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+
+                        <DatePicker
+                            android:id="@+id/cs_start_day"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingRight="10dp"
+                            android:calendarViewShown="false"
+                            android:background="@color/colorAccent"
+                            android:datePickerMode="spinner" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_weight="0.01"
+                        android:paddingTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="설문 종료일"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorAccent"
+                            android:textAlignment="center"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+
+                        <DatePicker
+                            android:id="@+id/cs_finish_day"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:calendarViewShown="false"
+                            android:background="@color/colorAccent"
+                            android:datePickerMode="spinner" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:paddingTop="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:layout_gravity="start"
+                            android:gravity="start"
+                            android:paddingTop="10dp"
+                            android:text="설문 소개"
+                            android:textSize="17dp"
+                            android:textAlignment="center"
+                            android:textColor="#000000"/>
+
+                        <EditText
+                            android:id="@+id/cs_survey_intro"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:paddingLeft="5dp"
+                            android:maxLength="100"
+                            android:maxLines="5"
+                            android:textColor="@color/colorAccent"
+                            android:hint="진행하려는 설문에 대해 자유롭게 소개하세요."
+                            android:textColorHint="#999999"
+                            android:privateImeOptions="defaultInputmode=korean"
+                            android:background="@drawable/border"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_weight="3"
+                    android:paddingBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:layout_gravity="top"
+                            android:gravity="top"
+                            android:layout_margin="1dp"
+                            android:text="개인정보"
+                            android:textSize="17dp"
+                            android:textColor="@color/colorAccent"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:layout_gravity="top"
+                            android:gravity="top"
+                            android:layout_margin="1dp"
+                            android:text="이용동의"
+                            android:textSize="17dp"
+                            android:textColor="@color/colorAccent"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:layout_gravity="start"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="목적"
+                            android:textSize="17dp"
+                            android:textColor="@color/colorAccent"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/border"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="3"
+                            android:layout_gravity="start"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="설문 통계 및 군부대 빅데이터,머신러닝 등에 활용"
+                            android:textSize="13dp"
+                            android:textColor="@color/colorAccent"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/border"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:layout_gravity="start"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="항목"
+                            android:textSize="17dp"
+                            android:textColor="@color/colorAccent"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/border"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="3"
+                            android:layout_gravity="start"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="이름, 생년월일, 성별, 휴대전화번호, 이메일, 부대정보"
+                            android:textSize="13dp"
+                            android:textColor="@color/colorAccent"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/border"/>
+
+                        <CheckBox
+                            android:id="@+id/cs_agree"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:layout_gravity="start"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="개인정보 수집 및 이용에 동의합니다."
+                            android:textSize="17dp"
+                            android:textColor="@color/colorAccent"
+                            android:buttonTint="@color/colorAccent"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/border"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cs_cancel_btn"
+                        android:background="@color/dot_dark_screen2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="1dp"
+                        android:text="취소"
+                        android:textSize="25dp"
+                        android:gravity="center"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/cs_next_btn"
+                        android:background="@color/bg_screen2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="1dp"
+                        android:text="다음"
+                        android:gravity="center"
+                        android:textSize="25dp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

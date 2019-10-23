@@ -36,4 +36,28 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"/>
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"/>
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:text="시작하기"
+            android:textSize="25dp"
+            android:onClick="MoveToLogin"/>
+
+    </LinearLayout>
 </RelativeLayout>

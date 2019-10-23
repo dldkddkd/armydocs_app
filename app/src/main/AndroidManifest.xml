@@ -1,27 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.survey">
+    package="com.example.armydocs">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/loading"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name="com.example.armydocs.Activity.LoadingActivity"
+            android:label="ArmyDocs">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".FirstStartActivity"/>
 
+        <activity android:name="com.example.armydocs.Activity.MainActivity"></activity>
+        <activity
+            android:name="com.example.armydocs.Activity.HomeActivity"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.example.armydocs.Activity.WriteSurveyActivity"></activity>
+        <activity android:name="com.example.armydocs.Activity.LoginActivity"></activity>
+        <activity android:name="com.example.armydocs.Activity.SignUpActivity"></activity>
+        <activity android:name="com.example.armydocs.Util.MyPagerAdapter"></activity>
+	    <activity android:name="com.example.armydocs.Activity.CreateSurveyActivity"></activity>
+        <activity android:name="com.example.armydocs.Activity.InfoActivity"></activity>
+        <activity android:name="com.example.armydocs.Activity.ResultActivity"></activity>
+        <activity android:name="com.example.armydocs.Activity.AnswerActivity"></activity>
     </application>
-
 </manifest>
