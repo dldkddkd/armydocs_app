@@ -123,7 +123,7 @@ public class CreateSurveyActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Toast.makeText(getApplicationContext(),"code:"+requestCode,Toast.LENGTH_LONG).show();
+        super.onActivityResult(requestCode,resultCode,data);
 
         if (requestCode == PICK_FROM_ALBUM) {
             if(data == null)
