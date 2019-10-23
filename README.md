@@ -1,5 +1,10 @@
 # 프로젝트명 - ArmyDocs(APP version)
 
+---
+* 앱 화면<br><br>
+<img width="30%" height="30%" src="https://github.com/dldkddkd/armydocs_app/blob/master/app/src/main/res/drawable/slide2.png"></img>
+<img width="30%" height="30%" src="https://github.com/dldkddkd/armydocs_app/blob/master/app/src/main/res/drawable/slide1_2.png"></img>
+<img width="30%" height="30%" src="https://github.com/dldkddkd/armydocs_app/blob/master/app/src/main/res/drawable/slide3.png"></img>
 - - - 
 
 1. 아이템 개요
@@ -18,7 +23,12 @@
 >아미독스는 웹 기반 서비스로, 웹 서버는 Tomcat과 Spring을 기반으로 Restful 하게 구축하며, POI 라이브러리를 활용해 엑셀 파일을 관리합니다. DB는 MySQL을 사용하고, Hadoop으로 집계된 데이터를 분석합니다. 또한 ELK Stack을 사용해 대규모 요청에 따른 서버 상태를 모니터링합니다.
 >웹 클라이언트는 Vue.js를 활용해 SPA로 구축하며, Vuetify와 Webpack, Babel을 사용해 다양한 브라우저를 지원하는 반응형 웹앱을 지원합니다. 추가로 애플리케이션도 추가 개발하여 모바일 편의성을 극대화할 예정입니다.
 >아미독스 프로젝트가 국군에서 공식적으로 운영되는 체계로 채택된다면, 수많은 장병들을 대상으로 집계된 데이터들이 통합된 환경에서 관리 및 운용될 수 있으며, 현재 4차 산업혁명 시대를 맞아 진행 중인 여러 빅데이터 및 머신러닝 프로젝트에서 더 유의미한 정보로 가공되어, 대한민국 국군의 발전에 큰 기여를 할 수 있을 것입니다.
+<br>
 
 개발 도구 : 안드로이드 스튜디오
 
 데이터 베이스 : https://console.firebase.google.com/project/armydocs-233a3/database/armydocs-233a3/data
+
+웹 버전 깃헙 사이트 : https://github.com/armypago/armydocs 
+
+앱 버전 깃헙 사이트 : https://github.com/dldkddkd/armydocs_app
