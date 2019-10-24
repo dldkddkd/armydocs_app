@@ -29,6 +29,7 @@ public class HomeActivity extends AppCompatActivity {
     public TextView profile_discharge;
     public Intent intent;
     public String id;
+    String index;
     public static Context mContext;
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -45,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 intent = getIntent();
-                String index = intent.getExtras().get("index").toString();
+                index = intent.getExtras().get("index").toString();
                 if (dataSnapshot.getChildrenCount() > 0 && index != null) {
                     String _name = dataSnapshot.child(index).child("name").getValue().toString();
                     String _rank = dataSnapshot.child(index).child("rank").getValue().toString();
@@ -59,11 +60,11 @@ public class HomeActivity extends AppCompatActivity {
 
                     if (profile_rank != null)
                         profile_rank.setText(_rank);
-                    if (profile_rank != null)
+                    if (profile_name != null)
                         profile_name.setText(_name);
-                    if (profile_rank != null)
+                    if (profile_enlist != null)
                         profile_enlist.setText(_enlist);
-                    if (profile_rank != null)
+                    if (profile_discharge != null)
                         profile_discharge.setText(_discharge);
                 }
             }
@@ -125,7 +126,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent infoIntent = new Intent(HomeActivity.this,InfoActivity.class);
-
+                infoIntent.putExtra("index",index);
                 startActivity(infoIntent);
             }
         });

@@ -19,10 +19,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.armydocs.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,6 +41,10 @@ public class InfoActivity extends AppCompatActivity {
     private static final int PICK_FROM_ALBUM = 1;
     private static final int PICK_FROM_CAMERA = 2;
     private File tempFile;
+    public Intent infointent;
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = firebaseDatabase.getReference();
+    DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
 
     public InfoActivity() {
         // Required empty public constructor
@@ -46,6 +55,30 @@ public class InfoActivity extends AppCompatActivity {
         infoActivity = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+
+        mRootRef.child("tb_user").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                infointent = getIntent();
+                String index = infointent.getExtras().get("index").toString();
+                if (dataSnapshot.getChildrenCount() > 0 && index != null) {
+                    String _name = dataSnapshot.child(index).child("name").getValue().toString();
+                    String _rank = dataSnapshot.child(index).child("rank").getValue().toString();
+                    String _belong = dataSnapshot.child(index).child("rank").getValue().toString();
+
+                    EditText profile_rank = findViewById(R.id.info_rank);
+                    EditText profile_name = findViewById(R.id.info_name);
+                    EditText profile_belong = findViewById(R.id.info_belong);
+
+                    if (profile_rank != null)
+                        profile_rank.setText(_rank);
+                    if (profile_name != null)
+                        profile_name.setText(_name);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) { }
+        });
 
         final ImageView backbutton = (ImageView) findViewById(R.id.back_button);
         backbutton.setOnClickListener(new View.OnClickListener() {
@@ -64,14 +97,6 @@ public class InfoActivity extends AppCompatActivity {
                 startActivityForResult(intent, PICK_FROM_ALBUM);
             }
         });
-
-/*        DatePicker start = findViewById(R.id.info_enlist_day);
-        EditText editText = (EditText)start.getChildAt(1);
-        editText.setTextColor(Color.BLACK);
-
-        DatePicker finish = findViewById(R.id.info_discharge_day);
-        EditText editText2 = (EditText)finish.getChildAt(1);
-        editText.setTextColor(Color.BLACK);*/
 
         Button save = (Button)findViewById(R.id.info_save);
         final DatePicker info_enlist_day = findViewById(R.id.info_enlist_day);
@@ -118,6 +143,7 @@ public class InfoActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode,resultCode,data);
 
         if (requestCode == PICK_FROM_ALBUM) {
             Uri photoUri = data.getData();

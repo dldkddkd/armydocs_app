@@ -40,7 +40,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //아이디,비번 찾기
-                int a = 0;
             }
         });
     }

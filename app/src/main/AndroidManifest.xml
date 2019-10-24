@@ -36,5 +36,6 @@
         <activity android:name="com.example.armydocs.Activity.InfoActivity"></activity>
         <activity android:name="com.example.armydocs.Activity.ResultActivity"></activity>
         <activity android:name="com.example.armydocs.Activity.AnswerActivity"></activity>
+        <activity android:name="com.example.armydocs.Activity.IntroduceActivity"></activity>
     </application>
 </manifest>
