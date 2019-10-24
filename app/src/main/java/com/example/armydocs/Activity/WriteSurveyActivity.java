@@ -93,16 +93,22 @@ public class WriteSurveyActivity extends CreateSurveyActivity{
                 CheckBox cb = new CheckBox(WriteSurveyActivity.this);
                 EditText et = new EditText(WriteSurveyActivity.this);
                 View v;
+
+
                 if(ws_short.isChecked()) {
                     v = mInflater.inflate(R.layout.activity_question_short, null);
                     v.setId(question);
-
+                    ViewGroup vg = (ViewGroup)v;
+                    TextView qi = vg.findViewById(R.id.question_index);
+                    qi.setText(question+1+".");
                     mRootLinear.addView(v);
                 }
                 else if(ws_long.isChecked()) {
                     v = mInflater.inflate(R.layout.activity_question_long, null);
                     v.setId(question);
-
+                    ViewGroup vg = (ViewGroup)v;
+                    TextView qi = vg.findViewById(R.id.question_index);
+                    qi.setText(question+1+".");
                     mRootLinear.addView(v);
                 }
             }
