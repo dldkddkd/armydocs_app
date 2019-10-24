@@ -120,12 +120,14 @@ public class WriteSurveyActivity extends CreateSurveyActivity{
                 }
             }
         });
-
     }
     public void plus_option(View v){
         v.setVisibility(View.GONE);
         View view = mInflater.inflate(R.layout.activity_option, null);
-        mRootLinear.addView(view);
+        ViewGroup vg = (ViewGroup)v.getParent();
+        vg.addView(view);
+
+        //mRootLinear.addView(view);
     }
     public void delete_option(View v){
         ViewGroup vg = (ViewGroup)v.getParent();
