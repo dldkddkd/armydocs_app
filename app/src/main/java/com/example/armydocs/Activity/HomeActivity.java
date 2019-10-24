@@ -105,6 +105,13 @@ public class HomeActivity extends AppCompatActivity {
                 //문의하기 기능
             }
         });
+        TextView intro_dev = findViewById(R.id.introduce_dev);
+        intro_dev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,IntroduceActivity.class));
+            }
+        });
         TextView survey_result = findViewById(R.id.survey_result);
         survey_result.setOnClickListener(new View.OnClickListener() {
             @Override
