@@ -128,7 +128,8 @@ public class WriteSurveyActivity extends CreateSurveyActivity{
         mRootLinear.addView(view);
     }
     public void delete_option(View v){
-        v.setVisibility(View.GONE);
+        ViewGroup vg = (ViewGroup)v.getParent();
+        vg.setVisibility(View.GONE);
     }
     public void BackButton(View v){
         finish();
